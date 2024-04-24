@@ -5,12 +5,88 @@
     "version": "1.0"
   },
   "paths": {
+    "/login": {
+      "post": {
+        "summary": "Authenticate a user",
+        "tags": ["Authentication"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": ["username", "password"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid credentials"
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "summary": "Register a new user",
+        "tags": ["Authentication"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": ["username", "password"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User registration successful"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        }
+      }
+    },
     "/addTask": {
       "post": {
         "summary": "Add a new task",
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "requestBody": {
           "required": true,
           "content": {
@@ -55,19 +131,8 @@
     },
     "/getTasks": {
       "get": {
-        "summary": "Get tasks by user ID",
-        "tags": [
-          "Tasks"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "userId",
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
+        "summary": "Get tasks",
+        "tags": ["Tasks"],
         "responses": {
           "200": {
             "description": "Success response",
@@ -79,9 +144,14 @@
                     "tasks": {
                       "type": "array",
                       "items": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string"
+                          },
+                          "content": {
+                            "type": "string"
+                          }
                         }
                       }
                     }
@@ -101,9 +171,7 @@
     "/deleteTask": {
       "delete": {
         "summary": "Delete a task by title",
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "parameters": [
           {
             "in": "query",
@@ -140,9 +208,7 @@
     "/updateTask": {
       "put": {
         "summary": "Update a task content by title",
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "requestBody": {
           "required": true,
           "content": {
