@@ -42,7 +42,7 @@ m10-p1
 ### Descrição dos arquivos
 
 - static/swagger.json: Arquivo JSON usado para gerar o Swagger, utilizado na documentação da API.
-- api_insomnia.json: Coleção de Insomnia contendo configurações para testar a API.
+- insomnia.json: Coleção de Insomnia contendo configurações para testar a API.
 - create_tables.py: Script executado para criar as tabelas no banco de dados SQLite.
 - main.py: Arquivo principal responsável pela execução da API.
 - README.md: Este arquivo contendo informações sobre o projeto.
