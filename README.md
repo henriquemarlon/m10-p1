@@ -1,12 +1,12 @@
 # TO-DO Tasks: API Sync
 
-## Instruções para executar a API
+## Instruções para executar a API localmente
 
 Entre em `m10-p1` crie um virtual environment, ative e instale as bibliotecas necessárias:
 
 ```
-python3 -m venv venv
-source venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -22,7 +22,17 @@ Após isso, execute a API:
 python3 main.py
 ```
 
-A documentação Swagger da API estará disponível em http://127.0.0.1:5000/docs/
+## Instruções para executar a API localmente
+
+Para atender a segunda milestone da atividade foi feito um Dockerfile que virtualiza a api síncrona aqui referenciada. Para rodá-la siga as instruções abaixo:
+
+Rode a imagem utilizando o arquivo ```compose.yaml```:
+
+```bash
+docker compose up
+```
+
+A documentação Swagger da API estará disponível em http://127.0.0.1:3000/docs
 
 ## Arvore de arquivos
 
@@ -33,6 +43,7 @@ m10-p1
 ├── api_insomnia.json
 ├── create_tables.py
 ├── main.py
+├── Dockerfile
 ├── README.md
 ├── requirements.txt
 ├── sqlite.db
@@ -48,3 +59,6 @@ m10-p1
 - README.md: Este arquivo contendo informações sobre o projeto.
 - requirements.txt: Lista das bibliotecas necessárias para o funcionamento do sistema.
 - sqlite.db: Banco de dados SQLite utilizado para armazenar as informações do sistema.
+
+
+Teste da Aplicação:
