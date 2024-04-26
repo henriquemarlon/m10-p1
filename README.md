@@ -32,7 +32,7 @@ Rode a imagem utilizando o arquivo ```compose.yaml```:
 docker compose up
 ```
 
-A documentação Swagger da API estará disponível em http://127.0.0.1:3000/docs
+A documentação Swagger da API estará disponível em http://127.0.0.1:5000/docs
 
 ## Arvore de arquivos
 
