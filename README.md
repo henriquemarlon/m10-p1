@@ -47,7 +47,6 @@ m10-p1
 ├── README.md
 ├── requirements.txt
 ├── sqlite.db
-
 ```
 
 ### Descrição dos arquivos
