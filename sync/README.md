@@ -57,9 +57,7 @@ m10-p1
 - main.py: Arquivo principal responsável pela execução da API.
 - README.md: Este arquivo contendo informações sobre o projeto.
 - requirements.txt: Lista das bibliotecas necessárias para o funcionamento do sistema.
-- sqlite.db: Banco de dados SQLite utilizado para armazenar as informações do sistema.
-
-
+  
 Teste da Aplicação:
 
 acesse o video do [arquivo](https://drive.google.com/file/d/1DGb8XQTDOYAJtt6bUcmQ8A2cGxA45KAt/view)
