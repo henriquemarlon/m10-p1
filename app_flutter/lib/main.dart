@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_flutter/gradient_container.dart';
+import 'package:app_flutter/wigets/gradient_container.dart';
 
 void main() {
   runApp(
@@ -13,3 +13,4 @@ void main() {
 
 
 
+ 

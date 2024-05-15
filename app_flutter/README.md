@@ -1,16 +1,28 @@
-# app_flutter
+# App_flutter
 
-A new Flutter project.
+Este recorte do projeto compreende a implementação do app flutter integrado com o CRUD de tasks feito na última ponderada.
 
-## Getting Started
+## Como rodar:
 
-This project is a starting point for a Flutter application.
+> WARNING
+> Para seguir com os passos seguintes, é necessário rodar o backend e pasa isso basta seguir as instruções presentes [aqui](https://github.com/henriquemarlon/m10-p1/tree/main/async#readme)
 
-A few resources to get you started if this is your first Flutter project:
+1º Inicie o emulador:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![image](image.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2º Rode o comando abaixo para instalar as libs/dependências do app:
+
+```bash
+flutter pub get
+```
+
+3º Rode o comando abaixo para rodar o aplicação dentro do emulador:
+
+```bash
+flutter run
+```
+
+## Demonstração do sistema:
+
+[Video](https://drive.google.com/file/d/10YGTVitHTqBTlDUEgQq0LQTiZUzhBAhN/view?usp=sharing)
